@@ -4,6 +4,8 @@ import { Box, Heading, List, ListItem, ListIcon, Text } from "@chakra-ui/react";
 import ReactMarkdown from "react-markdown";
 import { ChevronRightIcon } from "@chakra-ui/icons";
 
+import "./Ingredients.css";
+
 export const RecipeParagraph = ({ title, type, data }) => {
   let content = "";
 
@@ -30,7 +32,11 @@ export const RecipeParagraph = ({ title, type, data }) => {
       );
       break;
     case "MARKDOWN":
-      content = <ReactMarkdown>{data}</ReactMarkdown>;
+      content = (
+        <ReactMarkdown className="markdown">
+          {data.replace("\n", "  \n")}
+        </ReactMarkdown>
+      );
       break;
 
     default:

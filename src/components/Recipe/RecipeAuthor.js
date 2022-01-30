@@ -1,5 +1,5 @@
 import React from "react";
-import { Avatar, Flex, Text, Link as ChakraLink } from "@chakra-ui/react";
+import { Avatar, Flex, Text } from "@chakra-ui/react";
 
 export const RecipeAuthor = ({ author }) => (
   <Flex alignItems={"center"} mb={"2rem"}>
