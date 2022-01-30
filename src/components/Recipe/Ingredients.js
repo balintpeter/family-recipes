@@ -34,7 +34,7 @@ export const RecipeParagraph = ({ title, type, data }) => {
     case "MARKDOWN":
       content = (
         <ReactMarkdown className="markdown">
-          {data.replace("\n", "  \n")}
+          {data.replaceAll("\n", "  \n")}
         </ReactMarkdown>
       );
       break;
