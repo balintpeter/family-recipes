@@ -6,9 +6,12 @@ const RecipeCard = ({ recipe }) => {
   const { slug, title, description, category } = recipe;
   return (
     <React.Fragment key={slug}>
+      {/* TODO: LinkOverlay, LinkBox */}
       <Link to={`/recipes/${slug}`} style={{ width: "100%" }}>
         <Box p={5} shadow="md" borderWidth="1px">
-          <Heading fontSize="xl">{title}</Heading>
+          <Heading fontSize="xl" color={"teal.500"}>
+            {title}
+          </Heading>
           <Text mt={4} mb={2}>
             {description}
           </Text>
